@@ -26,7 +26,7 @@ print(corr['SalePrice'].sort_values(ascending=False)[:5],'\n')
 print(corr['SalePrice'].sort_values(ascending=False)[-5:])
 
 #handling null values
-nulls = pd.DataFrame(train.isull().sum().sort_values(ascending=False)[:25])
+nulls = pd.DataFrame(train.isnull().sum().sort_values(ascending=False)[:25])
 nulls.columns = ['Null Count']
 nulls.index.name = 'Feature'
 
